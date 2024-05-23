@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take The Comprehensive Intellectual Life Purpose Quiz</title>
+    <style>
+        body {
+          background-color: white;
+          color: black;
+          height: 100vh;
+          margin: 0;
+          font-family: Arial, sans-serif;
+          cursor: url("cursor.png"), auto;
+          text-align: center;
+      }
+      .centered-content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+        }
+</style>
+</head>
+<body>
+    <h1>The Comprehensive Intellectual Life Purpose Quiz</h1>
+    <div class="centered-content">
+        <label for="dropdown">I tend to...:</label>
+        <select id="dropdown">
+            <option value="">Select an option</option>
+            <option value="option1">Please others </option>
+            <option value="option2">Displease others</option>
+            <option value="option3">Please myself</option>
+            <option value="option4">Displease myself</option>
+        </select>
+        <img id="hover-image" src="">
+        <a href="page6.html"><h4>[Continue]</h4></a>
+    </div>
+    <script>
+        var dropdown = document.getElementById('dropdown');
+        var body = document.body;
+    
+        dropdown.addEventListener('change', function(event) {
+            switch (event.target.value) {
+                case 'option1':
+                    body.style.backgroundImage = 'url("PleaseOthers.jpeg")';
+                    break;
+                case 'option2':
+                    body.style.backgroundImage = 'url("DispleaseOthers.jpeg")';
+                    break;
+                case 'option3':
+                    body.style.backgroundImage = 'url("PleaseMyself.jpeg")';
+                    break;
+                case 'option4':
+                    body.style.backgroundImage = 'url("DispleaseMyself.jpeg")';
+                    break;
+                default:
+                    body.style.backgroundImage = 'none';
+                    break;
+            }
+        });
+    </script>
+</body>
+</html>
